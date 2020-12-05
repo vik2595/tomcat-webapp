@@ -4,4 +4,23 @@
   <artifactId>webapp8</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <!-- Update maven war plugin to 3.1.0 or higher -->
+                <version>3.1.0</version>
+                <configuration>
+                    <!-- Set failOnMissingWebXml configuration for maven war plugin -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <!-- Set failOnMissingWebXml as false in properties section -->
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
 </project>
